@@ -27,11 +27,9 @@ public class ReplyController {
 		replyService.insertReply(postId, user.getId(), reply);
 		return "댓글 작성 완료 되었습니다.";
 	}
-	
 	@DeleteMapping("/reply/deleteReply/{id}")
 	public @ResponseBody String deleteReply(@PathVariable int id) {
 		replyService.deleteReply(id);
 		return "댓글 삭제되셨습니다.";
 	}
-	
 }

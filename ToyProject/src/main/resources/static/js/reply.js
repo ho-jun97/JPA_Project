@@ -7,7 +7,10 @@ function insertReply(postId) {
 		type: "POST",
 		url: "/reply/insertReply/"+postId,
 		data: JSON.stringify(reply), 
-		contentType: "application/json; charset=utf-8"
+		contentType: "application/json; charset=utf-8",
+		success : function(){
+			alert("success 성공(?)");
+		}
 	}).done(function(response) {
 		alert(response);
 		location = "/post/details/"+postId;
